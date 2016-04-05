@@ -25,7 +25,7 @@ Or install it yourself as:
 require 'related_word'
 
 word = 'school'
-RelatedWord.find(word)
+RelatedWord.new.find(word)
 ```
 
 ## Contributing
