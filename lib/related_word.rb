@@ -1,3 +1,4 @@
+require 'related_word/version'
 require 'related_word/semantic_service'
 
 class RelatedWord
