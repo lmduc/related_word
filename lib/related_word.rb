@@ -11,5 +11,6 @@ module RelatedWord
     uri = URI.parse(link)
     response = Net::HTTP.get_response(uri)
     JSON.parse(response.body)
+  VERSION = '0.1.5'
   end
 end
