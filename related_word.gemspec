@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["MatBi"]
   spec.email         = ["leminhducktvn@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A gem for finding related words of a word}
+  spec.description   = %q{A gem for finding related words of a word using semantic-link.com}
+  spec.homepage      = ""
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
