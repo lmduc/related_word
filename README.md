@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### RelatedWord.find
+```ruby
+word = 'school'
+RelatedWord.find(word)
+```
 
 ## Development
 
