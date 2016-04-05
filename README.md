@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-### RelatedWord.find
+#### RelatedWord.find
 ```ruby
 word = 'school'
 RelatedWord.find(word)
