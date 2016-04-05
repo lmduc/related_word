@@ -4,6 +4,8 @@ require 'related_word/semantic_service'
 class RelatedWord
   UnknownService = Class.new(StandardError)
 
+  attr_reader :service
+
   def initialize(service = :semantic)
     @service = service
   end
