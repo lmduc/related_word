@@ -22,6 +22,8 @@ Or install it yourself as:
 
 #### RelatedWord.find
 ```ruby
+require 'related_word'
+
 word = 'school'
 RelatedWord.find(word)
 ```
