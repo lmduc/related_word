@@ -6,7 +6,7 @@ class RelatedWord
   end
 
   def find(word)
-    UnknownService = CLass.new(StandardError)
+    UnknownService = Class.new(StandardError)
 
     if service == :semantic
       SemanticService.new.find(word)
