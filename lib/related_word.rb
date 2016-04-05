@@ -8,6 +8,6 @@ module RelatedWord
     link = "http://semantic-link.com/related.php?word=#{word}"
     uri = URI.parse(link)
     response = Net::HTTP.get_response(uri)
-    JSON.parse(response)
+    JSON.parse(response.body)
   end
 end
