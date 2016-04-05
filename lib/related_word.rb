@@ -4,8 +4,10 @@ require "net/http"
 require "uri"
 
 module RelatedWord
+  LINK = "http://semantic-link.com/related.php?word="
+
   def self.find(word)
-    link = "http://semantic-link.com/related.php?word=#{word}"
+    link = "#{LINK}#{word}"
     uri = URI.parse(link)
     response = Net::HTTP.get_response(uri)
     JSON.parse(response.body)
