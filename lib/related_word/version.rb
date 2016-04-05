@@ -1,3 +1,3 @@
-module RelatedWord
-  VERSION = '0.1.9'
+class RelatedWord
+  VERSION = '0.1.10'
 end
