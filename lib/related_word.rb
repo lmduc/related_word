@@ -1,7 +1,7 @@
 require 'related_word/semantic_service'
 
 class RelatedWord
-  VERSION = '0.1.5'
+  VERSION = '0.1.6'
 
   def initialize(service = :semantic)
     @service = service
