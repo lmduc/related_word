@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A gem for finding related words of a word}
   spec.description   = %q{A gem for finding related words of a word using semantic-link.com}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/lmduc/related_word"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
