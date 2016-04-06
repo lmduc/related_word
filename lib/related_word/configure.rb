@@ -4,10 +4,10 @@ class RelatedWord
   end
 
   class Configure
-    # The service used for find related words
+    # The default service used for find related words
     @service = :semantic
 
-    # The timeout of each request to the service
+    # The default timeout of each request to the service
     @timeout = 2000
 
     class << self
