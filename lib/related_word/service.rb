@@ -18,7 +18,7 @@ class RelatedWord
       end
 
       def service_name
-        Configure.service.split('_').map(&:capitalize).join
+        Configure.service.to_s.split('_').map(&:capitalize).join
       end
     end
   end
