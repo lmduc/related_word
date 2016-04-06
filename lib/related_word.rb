@@ -1,4 +1,4 @@
-require 'related_word/semantic_service'
+require 'related_word/service'
 
 class RelatedWord
   attr_reader :service

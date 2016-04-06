@@ -1,3 +1,5 @@
+require 'related_word/service/semantic_service'
+
 class RelatedWord::Service
   UnknownService = Class.new(StandardError)
 
