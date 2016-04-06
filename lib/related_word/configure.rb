@@ -9,5 +9,9 @@ class RelatedWord
 
     # The timeout of each request to the service
     @@timeout = 2000
+
+    class << self
+      attr_accessor :service, :timeout
+    end
   end
 end
