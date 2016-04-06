@@ -1,6 +1,7 @@
-require "json"
-require "net/http"
-require "uri"
+require 'json'
+require 'net/http'
+require 'uri'
+require 'timeout'
 
 class RelatedWord
   class Service
@@ -8,8 +9,10 @@ class RelatedWord
       LINK = "http://semantic-link.com/related.php?word="
 
       def find(word)
-        resp = Net::HTTP.get_response(uri(word))
-        JSON.parse(resp.body)
+        Timeout::timeout(2000) do
+          resp = Net::HTTP.get_response(uri(word))
+          JSON.parse(resp.body)
+        end
       end
 
       private
