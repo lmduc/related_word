@@ -18,6 +18,14 @@ Or install it yourself as:
 
     $ gem install related_word
 
+## Config
+
+```ruby
+RelatedWord.config do |c|
+  c.timeout = 200 # The timeout for each request to the service
+end
+```
+
 ## Usage
 
 #### RelatedWord.find
