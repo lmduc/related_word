@@ -6,9 +6,13 @@ class RelatedWord::SemanticService
   LINK = "http://semantic-link.com/related.php?word="
 
   def find(word)
-    link = "#{LINK}#{word}"
-    uri = URI.parse(link)
-    response = Net::HTTP.get_response(uri)
-    JSON.parse(response.body)
+    resp = Net::HTTP.get_response(uri(word))
+    JSON.parse(resp.body)
+  end
+
+  private
+
+  def uri(word)
+    URI.parse("#{LINK}#{word}")
   end
 end
