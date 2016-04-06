@@ -2,14 +2,23 @@ require 'related_word/service/semantic_service'
 
 class RelatedWord
   class Service
-    UnknownService = Class.new(StandardError)
+    class << self
+      def instance
+        instance_class.new
+      end
 
-    def self.get(service)
-      case service
-      when :semantic
-        Service::SemanticService.new
-      else
-        raise UnknownService
+      private
+
+      def instance_class
+        "Service::#{class_name}".constantize
+      end
+
+      def class_name
+        "#{service_name}Service"
+      end
+
+      def service_name
+        Configure.service.split('_').map(&:capitalize).join
       end
     end
   end

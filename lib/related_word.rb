@@ -1,13 +1,10 @@
 require 'related_word/service'
+require 'related_word/configure'
 
 class RelatedWord
   attr_reader :service
 
-  def initialize(service = :semantic)
-    @service = service
-  end
-
   def find(word)
-    Service.get(service).find(word)
+    Service.instance.find(word)
   end
 end

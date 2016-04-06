@@ -9,7 +9,7 @@ class RelatedWord
       LINK = "http://semantic-link.com/related.php?word="
 
       def find(word)
-        Timeout::timeout(2000) do
+        Timeout::timeout(Configure.timeout) do
           resp = Net::HTTP.get_response(uri(word))
           JSON.parse(resp.body)
         end
