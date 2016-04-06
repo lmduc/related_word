@@ -10,7 +10,7 @@ class RelatedWord
       private
 
       def instance_class
-        "Service::#{class_name}".constantize
+        Object.const_get("RelatedWord::Service::#{class_name}")
       end
 
       def class_name
