@@ -11,11 +11,11 @@ class RelatedWord
       private
 
       def class_name(service)
-        "#{service || service_name}Service"
+        "#{service_name(service || Configure.service)}Service"
       end
 
-      def service_name
-        Configure.service.to_s.split('_').map(&:capitalize).join
+      def service_name(service)
+        service.to_s.split('_').map(&:capitalize).join
       end
     end
   end
