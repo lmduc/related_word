@@ -25,6 +25,8 @@ Or install it yourself as:
 
 ## Config
 
+The code for config below is optional. For Rails, you can put those code in the file `config/initializers/related_word.rb`. For the pure Ruby, you can run those code whenever you want to set the config for the gem.
+
 ```ruby
 RelatedWord.config do |c|
   # Set the service serving the related word
@@ -33,6 +35,7 @@ RelatedWord.config do |c|
   c.service = :onelook
 
   # The timeout for each request to the service
+  # The default timeout is 2000
   c.timeout = 2000
 end
 ```
@@ -44,8 +47,15 @@ end
 require 'related_word'
 
 word = 'student'
-RelatedWord.new.find(word)
+
+r = RelatedWord.new # The default service is :semantic
+r.find(word)
 #=> [{:word=>"individualized", :score=>"0.258894"}, {:word=>"NUS", :score=>"0.206925"}, {:word=>"extracurricular", :score=>"0.206289"}, {:word=>"Yearbook", :score=>"0.197864"}, ...]
+
+
+r = RelatedWord.new(:onelook) # Use the service :onelook
+r.find(word)
+#=> [{:word=>"academy", :score=>0}, {:word=>"grade", :score=>0}, {:word=>"seminary", :score=>0}, {:word=>"college", :score=>0}, {:word=>"graduate", :score=>0}, ...]
 ```
 
 ## Contributing
