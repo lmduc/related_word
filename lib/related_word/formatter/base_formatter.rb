@@ -1,10 +1,10 @@
 class RelatedWord
   module Formatter
     class BaseFormatter
-      attr_reader :json_resp
+      attr_reader :resp
 
-      def initialize(json_resp)
-        @json_resp = json_resp
+      def initialize(resp)
+        @resp = resp
       end
     end
   end

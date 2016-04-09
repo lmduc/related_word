@@ -1,4 +1,5 @@
 require 'related_word/service/semantic_service'
+require 'related_word/service/onelook_service'
 
 class RelatedWord
   class Service
