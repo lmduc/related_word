@@ -9,12 +9,12 @@ class RelatedWord
   end
 
   def find(word)
-    service_instance.new(word).find
+    service_class.new(word).find
   end
 
   private
 
-  def service_instance
-    @service_instance ||= Service.instance_class(service).new
+  def service_class
+    @service_class ||= Service.instance_class(service)
   end
 end
