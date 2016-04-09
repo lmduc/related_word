@@ -37,8 +37,9 @@ end
 ```ruby
 require 'related_word'
 
-word = 'school'
+word = 'student'
 RelatedWord.new.find(word)
+> #=> [{:word=>"individualized", :score=>"0.258894"}, {:word=>"NUS", :score=>"0.206925"}, {:word=>"extracurricular", :score=>"0.206289"}, {:word=>"Yearbook", :score=>"0.197864"}, ...]
 ```
 
 ## Contributing
