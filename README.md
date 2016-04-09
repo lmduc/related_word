@@ -27,7 +27,13 @@ Or install it yourself as:
 
 ```ruby
 RelatedWord.config do |c|
-  c.timeout = 200 # The timeout for each request to the service
+  # Set the service serving the related word
+  # The services is one of [:onelook, :semantic]
+  # The default service is :semantic
+  c.service = :onelook
+
+  # The timeout for each request to the service
+  c.timeout = 2000
 end
 ```
 
