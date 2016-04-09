@@ -3,15 +3,11 @@ require 'related_word/service/semantic_service'
 class RelatedWord
   class Service
     class << self
-      def instance
-        instance_class.new
-      end
-
-      private
-
       def instance_class
         Object.const_get("RelatedWord::Service::#{class_name}")
       end
+
+      private
 
       def class_name
         "#{service_name}Service"
