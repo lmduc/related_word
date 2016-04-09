@@ -4,7 +4,7 @@ Get the list of related words of a specific word.
 
 ## Versions
 
-This gem has been improved through some versions:
+For installations and instructions of older versions, please follow below links:
 * [0.2](https://github.com/lmduc/related_word/tree/v0.2)
 
 ## Installation
