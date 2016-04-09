@@ -4,14 +4,14 @@ require 'related_word/service/onelook_service'
 class RelatedWord
   class Service
     class << self
-      def instance_class
-        Object.const_get("RelatedWord::Service::#{class_name}")
+      def instance_class(service)
+        Object.const_get("RelatedWord::Service::#{class_name(service)}")
       end
 
       private
 
-      def class_name
-        "#{service_name}Service"
+      def class_name(service)
+        "#{service || service_name}Service"
       end
 
       def service_name
