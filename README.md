@@ -2,6 +2,11 @@
 
 Get the list of related words of a specific word.
 
+## Versions
+
+This gem has been improved through some versions:
+* [0.2](https://github.com/lmduc/related_word/tree/v0.2)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -44,4 +49,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
